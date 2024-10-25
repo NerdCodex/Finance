@@ -1,7 +1,9 @@
-from flask import Flask, render_template, flash
+from flask import Flask, render_template
 import pandas as pd
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Google Sheet URLs (replace with your own)
 SHEET_URL_RECEIPT = 'https://docs.google.com/spreadsheets/d/11MoQLWYJd5CdWG2Z67IQ8b0uvdwZ1-tKnmGI2W9Tcp8/export?gid=228565080&format=csv'  # Update with Receipt sheet tab ID
